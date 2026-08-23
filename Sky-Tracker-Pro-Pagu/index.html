@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App || Project-Pagu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+  <script src="https://kit.fontawesome.com/20eb078265.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--Weather App-->
+  <form id="weather-cont">
+    <h1 class="title">Sky Tracker</h1>
+    <div class="inputs">
+      <i class="fa-solid fa-location-dot" id="ic"></i>
+      <input type="text" id="input" placeholder="Enter City Name" name="city" required />
+      <button type="submit" id="search">Search</button>
+    </div>
+
+    <div class="weather-card" id="weatherCard">
+      <div class="weather-loader" id="loading" aria-live="polite">
+        <div class="spinner"></div>
+        <p>Loading weather...</p>
+      </div>
+
+      <div class="weather-data">
+        <div class="first box">
+          <div id="city">
+           <!--- <p class="city">Chennai</p> -->
+          </div>
+          
+          <div id="temp">
+           <!--  <p class="temp">37c</p> -->
+          </div>
+        </div>
+
+        <div class="details box">
+          <div id="feels">
+           <!-- <p class="feelslike">feelslike</p> -->
+          </div>
+
+          <div id="description">
+           <!-- <p class="description">description</p>  -->
+          </div>
+        </div>
+
+        <div class="last box">
+          <div id="icon">
+           <!--- <img src=""> -->
+          </div>
+
+          <div id="humidity">
+           <!-- <p class="humidity">humidity</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
