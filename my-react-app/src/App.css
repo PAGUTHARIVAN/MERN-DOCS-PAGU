@@ -1,0 +1,450 @@
+body {
+  min-height: 100vh;
+  background-color: rgb(7, 6, 6);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  font-size: 1rem;
+  background-color: rgba(128, 128, 128, 0.181);
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(128, 128, 128, 0.181);
+}
+nav a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: rgb(191, 191, 191);
+  padding: 5px 10px;
+  background-color: rgba(119, 118, 118, 0.304);
+  border-radius: 10px;
+  transition: all ease 0.25s;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.64);
+}
+
+nav a:active {
+  scale: 0.96;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: rgb(253, 251, 251);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.493);
+  background-color: crimson;
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+.go-to-todo {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-weight: 700;
+  background-color: rgba(255, 0, 0, 0.617);
+  color: whitesmoke;
+  transition: all ease 0.25s;
+}
+
+.go-to-todo:hover {
+  background-color: red;
+}
+
+.go-to-todo:active {
+  scale: 0.95;
+}
+
+.home-container {
+  background-color: rgba(128, 128, 128, 0.192);
+  height: 280px;
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 20px 60px rgba(245, 245, 245, 0.243);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.483);
+}
+
+.home-container h1 {
+  font-size: 5rem;
+  text-shadow: 0 0px 40px rgba(245, 245, 245, 0.615);
+}
+.home-container p {
+  color: gray;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  transition: all ease 0.95s;
+}
+.home-container p:hover {
+  color: whitesmoke;
+}
+
+/* todo container */
+.todo-container {
+  background-color: rgba(238, 237, 237, 0.174);
+  padding: 10px;
+  width: 500px;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-top: -210px;
+  box-shadow: 0 20px 50px rgba(245, 245, 245, 0.351);
+}
+
+.todo-container h1 {
+  text-align: center;
+}
+
+.todo-container .inputs-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-container .inputs-container input {
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: rgba(245, 245, 245, 0.24);
+  color: whitesmoke;
+  outline: none;
+  transition: all ease 0.95s;
+}
+
+.todo-container .inputs-container input:focus {
+  background-color: rgba(245, 245, 245, 0.091);
+}
+
+.todo-container .inputs-container button {
+  border: none;
+  outline: none;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: yellow;
+  transition: all ease 0.25s;
+}
+
+.todo-container .inputs-container button:hover {
+  box-shadow: 0 0px 10px rgba(255, 255, 0, 0.501);
+}
+
+.todo-container .inputs-container button:active {
+  scale: 0.9;
+}
+
+.filter-container {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  border: none;
+  outline: none;
+  padding: 5px 12px;
+  border-radius: 10px;
+  background-color: rgba(112, 116, 2, 0.484);
+  color: rgb(198, 197, 197);
+  transition: all ease 0.2s;
+}
+
+.filter-btn.active {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+.list-container li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-container li span {
+  color: rgba(245, 245, 245, 0.82);
+  font-weight: 600;
+  width: 85%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    140deg,
+    rgba(128, 128, 128, 0.334),
+    rgba(128, 128, 128, 0)
+  );
+  transition: all ease 0.2s;
+}
+
+.list-container .list-todo {
+  margin-bottom: 1rem;
+}
+
+.list-container li span:hover {
+  color: whitesmoke;
+}
+
+.list-container li button {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: rgba(255, 0, 0, 0.617);
+  color: white;
+  transition: all ease 0.2s;
+}
+
+.list-container li button:hover {
+  background-color: red;
+}
+
+.list-container li button:active {
+  scale: 0.95;
+}
+
+.list-container .no-todo {
+  color: white;
+}
+
+.list-container .filter-sign {
+  color: white;
+}
+
+.users-container {
+  background-color: rgba(128, 128, 128, 0.419);
+  height: 250px;
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.users-container li {
+  list-style: none;
+}
+
+.users-container li a {
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.596);
+  font-weight: 600;
+  transition: all ease 0.25s;
+}
+
+.users-container li a:hover {
+  color: whitesmoke;
+}
+
+.users-container h1 {
+  font-size: 3rem;
+  text-shadow: 0 0px 10px rgba(245, 245, 245, 0.592);
+}
+
+.users-list {
+  background-color: rgba(128, 128, 128, 0.532);
+  height: 200px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.users-list h1 {
+  text-shadow: 0 0px 10px whitesmoke;
+  font-size: 3rem;
+}
+
+.users-list p {
+  color: whitesmoke;
+}
+
+.users-list button {
+  border: none;
+  padding: 5px 12px;
+  border-radius: 10px;
+  background-color: rgb(255, 0, 51);
+  color: whitesmoke;
+  font-weight: 600;
+  transition: all ease 0.25s;
+}
+
+.users-list button:hover {
+  background-color: crimson;
+}
+
+.users-list button:active {
+  scale: 0.95;
+}
+
+.form-container {
+  background-color: rgba(128, 128, 128, 0.399);
+  padding: 10px;
+  width: 500px;
+  height: 850px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+.form-container input {
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: rgba(253, 252, 252, 0.422);
+}
+.form-container input:focus {
+  background-color: whitesmoke;
+}
+.form-container .legend-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-container legend {
+  color: whitesmoke;
+}
+
+.form-container fieldset {
+  border-radius: 10px;
+  padding: 10px;
+}
+.form-container label {
+  color: whitesmoke;
+  font-weight: 800;
+}
+
+.form-container select {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+.form-container textarea {
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.form-container .show-hide-btn {
+  width: 20%;
+  align-self: flex-end;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: crimson;
+  font-weight: 800;
+  color: whitesmoke;
+  transition: all ease 0.25s;
+}
+
+.form-container .show-hide-btn:hover {
+  background-color: rgb(242, 13, 59);
+  box-shadow: 0 0px 10px crimson;
+}
+
+.form-container .show-hide-btn:active {
+  scale: 0.9;
+}
+
+.form-container .terms-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.form-container .agree-condition {
+  margin: 0;
+  flex-shrink: 0;
+  width: 18px;
+}
+
+.form-container .sub {
+  width: 20%;
+  align-self: center;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  background-color: rgb(137, 255, 47);
+  transition: all ease 0.2s;
+}
+
+.form-container .sub:hover {
+  background-color: green;
+}
+
+.form-container .sub:active {
+  scale: 0.9;
+}
+
+.success-comp {
+  background-color: gray;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.success-comp h1 {
+  text-shadow: 0 0px 20px whitesmoke;
+}
+
+.success-comp a {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  padding: 5px 10px;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+.success-comp .go:hover {
+  background-color: rgb(255, 26, 26);
+}
+footer {
+  color: rgba(245, 245, 245, 0.565);
+  font-size: 0.9rem;
+}
